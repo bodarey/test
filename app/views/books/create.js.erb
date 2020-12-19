@@ -1,0 +1,8 @@
+
+$('#forma').remove();
+$('#new_link').show();
+$('#table').append('<%= j render(@book)%>');
+
+
+$("#notice").html("<%=j flash[:notice] %>");
+

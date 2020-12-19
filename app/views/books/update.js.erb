@@ -1,0 +1,9 @@
+
+$('#forma').remove();
+$('#new_link').show();
+
+
+$('.edit_row').find('td:first').text('<%= raw @book.name %>').next().text('<%= raw @book.phone %>');
+
+$('#table tr').removeClass("edit_row");
+$("#notice").html("<%=j flash[:notice] %>");

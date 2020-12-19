@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Books</h1>
+
+ <%= render 'table' %>
+
+<br>
+
+<%= link_to 'New Book', new_book_path, id: 'new_link', remote: true %>
+<br><br><br/>
+<%= form_for import_path, remote: true, html: { multipart: true } do |f| %>
+<%= f.label :attachment, 'only txt files' %>
+<%= f.file_field :attachment %>
+<%= f.submit 'import' %>
+<% end %>
+
+<br/> <br/><br/>
+ <%= link_to( 'Get data in a file',info_path,  id: 'download') %> 

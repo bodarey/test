@@ -1,0 +1,8 @@
+$('#forma').hide();
+$('#new_link').hide().after('<%= j render 'form'  %>');
+
+$('tr').find('td:first').each(function(){
+	if ($(this).text() == '<%= raw @book.name %>'){
+	$(this).parent().addClass('edit_row');
+  }
+});

@@ -1,0 +1,8 @@
+$('.delete').bind('ajax:success', function() {     
+  $(this).closest('tr').fadeOut();
+});
+
+$("#notice").html("<%=j flash[:notice] %>");
+
+$('#forma').remove();
+$('#new_link').show();
